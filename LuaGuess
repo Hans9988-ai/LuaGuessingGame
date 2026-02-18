@@ -1,0 +1,8 @@
+-- Seed the random number generator so results change each run
+math.randomseed(os.time())
+
+-- ===== GAME LOOP =====
+while true do
+
+    -- Computer picks a number from 1 to 100
+    local secret = math.random(1, 100)
