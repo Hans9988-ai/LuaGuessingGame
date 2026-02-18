@@ -18,3 +18,28 @@ while true do
     while attemptsLeft > 0 do
         print("Enter your guess:")
         local input = io.read()
+
+          -- Error handling: convert input to a number
+        local guess = tonumber(input)
+
+        if guess == nil then
+            -- Player typed a letter or invalid input
+            print("Please enter a valid number.")
+        else
+            -- Valid number entered
+
+            if guess == secret then
+                print("Correct! You win!")
+                won = true
+                break
+            elseif guess < secret then
+                print("Too low!")
+            else
+                print("Too high!")
+            end
+
+            attemptsLeft = attemptsLeft - 1
+            print("Attempts remaining: " .. attemptsLeft)
+        end
+    end
+    
