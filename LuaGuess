@@ -42,4 +42,19 @@ while true do
             print("Attempts remaining: " .. attemptsLeft)
         end
     end
-    
+
+      -- ===== WIN / LOSE MESSAGE =====
+    if not won then
+        print("You lose! The number was " .. secret)
+    end
+
+    -- ===== REPLAY OPTION =====
+    print("Play again? (yes/no)")
+    local answer = io.read()
+
+    if answer ~= "yes" then
+        print("Thanks for playing!")
+        break
+    end
+
+end
