@@ -6,3 +6,15 @@ while true do
 
     -- Computer picks a number from 1 to 100
     local secret = math.random(1, 100)
+
+    -- Player gets 7 attempts
+    local attemptsLeft = 7
+    local won = false
+
+    print("I'm thinking of a number from 1 to 100.")
+    print("You have 7 attempts to guess it.")
+
+    -- ===== GUESS LOOP =====
+    while attemptsLeft > 0 do
+        print("Enter your guess:")
+        local input = io.read()
